@@ -5,9 +5,13 @@ import Cart from '../Cart/Cart';
 import './Home.css'
 import { data } from 'autoprefixer';
 
+
+
 const Home = () => {
     const [allCourse, setAllCourse] = useState([])
     const [selectCourse, setSelectCourse] = useState([])
+    const [totalCost, setTotalCost] = useState(0)
+    const [remaining, setRemaining] = useState(0)
 
     useEffect(()=>{
         fetch('./data.json')
@@ -16,7 +20,25 @@ const Home = () => {
     }, [])
 
     const handleSelectCourse = (course) =>{
-        setSelectCourse([...selectCourse, course])
+        const isExist = selectCourse.find((item)=>item.id == course.id)
+        let count = course.Credit;
+
+        if (isExist) {
+            return alert('already selected')
+        }else{
+            selectCourse.forEach(item=>{
+                count = count + course.Credit
+            })
+            const totalRemaining = 20 - count;
+
+            if (count > 20) {
+                return alert('limit closed')
+            }else{
+                setTotalCost(count)
+                setRemaining(totalRemaining)
+                setSelectCourse([... selectCourse, course])
+            }
+        }
     }
 
 
@@ -32,16 +54,16 @@ const Home = () => {
                     <p className='w-72 m-4 text-sm'> {course.details}</p> 
                     <div className='flex m-4'>
                         <h3>Price: {course.Price}</h3>
-                        <h3>Credit: {course.Credit}</h3>
+                        <h3 className='mx-4'>Credit: {course.Credit}</h3>
                     </div>
-                    <button onClick={()=>handleSelectCourse(course)} className='bg-green-500 rounded-lg w-full mb-5'>Select</button>
+                    <button onClick={()=>handleSelectCourse(course)} className='bg-green-500 rounded-lg w-full mb-5 p-2 text-white'>Select</button>
                 </div>
                     ))
                 }
             </div>
 
             <div className='w-1/3'>
-                <Cart selectCourse={selectCourse} ></Cart>
+                <Cart selectCourse={selectCourse} remaining={remaining} totalCost={totalCost} ></Cart>
             </div>
         </div>
     );

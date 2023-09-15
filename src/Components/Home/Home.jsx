@@ -18,7 +18,7 @@ const Home = () => {
     const handleSelectCourse = (course) =>{
         setSelectCourse([...selectCourse, course])
     }
-console.log(selectCourse)
+
 
     return (
         <div className='flex mx-14 mt-10'>
@@ -41,7 +41,7 @@ console.log(selectCourse)
             </div>
 
             <div className='w-1/3'>
-                <Cart></Cart>
+                <Cart selectCourse={selectCourse} ></Cart>
             </div>
         </div>
     );

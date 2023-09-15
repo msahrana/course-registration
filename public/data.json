@@ -1,0 +1,75 @@
+[
+    {
+      "id": 101,
+      "image": "https://i.ibb.co/mDXDStF/introduction-to-programming.png",
+      "name": "Introduction to Programming",
+      "Credit": "2hr",
+      "Price": "$49.99",
+      "details": "Learn the basics of programming in this beginner-friendly course. No prior experience required."
+    },
+    {
+      "id": 102,
+      "image": "https://i.ibb.co/gR2W1LZ/Digital-Marketing-Fundamentals.jpg",
+      "name": "Digital Marketing Fundamentals",
+      "Credit": "3hr",
+      "Price": "$39.99",
+      "details": "Dive into the world of digital marketing and gain essential skills for online promotion."
+    },
+    {
+      "id": 103,
+      "image": "https://i.ibb.co/XxfdC32/Data-Science-Masterclass.jpg",
+      "name": "Data Science Masterclass",
+      "Credit": "3hr",
+      "Price": "$79.99",
+      "details": "Become a data science expert with hands-on projects and in-depth learning."
+    },
+    {
+      "id": 104,
+      "image": "https://i.ibb.co/KstCMMj/Graphic-Design-Hero.jpg",
+      "name": "Graphic Design Essentials",
+      "Credit": "4hr",
+      "Price": "$49.99",
+      "details": "Learn the principles of graphic design and create stunning visuals."
+    },
+    {
+      "id": 105,
+      "image": "https://i.ibb.co/HrkX1S8/Business-Ethics-and-Leadership.png",
+      "name": "Business Ethics and Leadership",
+      "Credit": "5hr",
+      "Price": "$59.99",
+      "details": "Develop ethical leadership skills for success in the corporate world."
+    },
+    {
+      "id": 106,
+      "image": "https://i.ibb.co/Fg4GzHq/Yoga-and-Meditation-for-Stress-Relief.jpg",
+      "name": "Yoga and Meditation for Stress Relief",
+      "Credit": "1hr",
+      "Price": "$29.99",
+      "details": "Relax your mind and body with yoga and meditation techniques."
+    },
+    {
+      "id": 107,
+      "image": "https://i.ibb.co/QPRdVz1/Mastering-Italian-Cuisine.jpg",
+      "name": "Mastering Italian Cuisine",
+      "Credit": "2hr",
+      "Price": "$69.99",
+      "details": "Explore the flavors of Italy and become a gourmet chef."
+    },
+    {
+      "id": 108,
+      "image": "https://i.ibb.co/nQHw5Y5/Introduction-to-Astrophysics.jpg",
+      "name": "Introduction to Astrophysics",
+      "Credit": "3hr",
+      "Price": "$89.99",
+      "details": "Unravel the mysteries of the universe with this introductory astrophysics course."
+    },
+    {
+      "id": 109,
+      "image": "https://i.ibb.co/sH4MPSP/Creative-Writing-Workshop.jpg",
+      "name": "Creative Writing Workshop",
+      "credit": "2hr",
+      "Price": "$44.99",
+      "details": "Hone your writing skills and unleash your creativity in this interactive workshop."
+    }
+  ]
+  

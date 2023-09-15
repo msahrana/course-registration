@@ -7,13 +7,18 @@ import { data } from 'autoprefixer';
 
 const Home = () => {
     const [allCourse, setAllCourse] = useState([])
+    const [selectCourse, setSelectCourse] = useState([])
 
     useEffect(()=>{
         fetch('./data.json')
         .then(res => res.json())
         .then(data => setAllCourse(data))
     }, [])
-console.log(allCourse)
+
+    const handleSelectCourse = (course) =>{
+        setSelectCourse([...selectCourse, course])
+    }
+console.log(selectCourse)
 
     return (
         <div className='flex mx-14 mt-10'>
@@ -22,14 +27,14 @@ console.log(allCourse)
                 {
                     allCourse.map(course=>(
                     <div className='card w-80 bg-white rounded-lg'>
-                    <img className='w-72 h-36 rounded-lg m-4' src="https://i.ibb.co/mDXDStF/introduction-to-programming.png" alt="" />
+                    <img className='w-72 h-36 rounded-lg m-4' src={course.image} alt="" />
                     <h2 className='m-4'>{course.name}</h2>
-                    <p className='w-72 m-4'>{course.details}</p>
+                    <p className='w-72 m-4 text-sm'> {course.details}</p> 
                     <div className='flex m-4'>
                         <h3>Price: {course.Price}</h3>
                         <h3>Credit: {course.Credit}</h3>
                     </div>
-                    <button className='bg-green-500 rounded-lg w-full'>Select</button>
+                    <button onClick={()=>handleSelectCourse(course)} className='bg-green-500 rounded-lg w-full mb-5'>Select</button>
                 </div>
                     ))
                 }

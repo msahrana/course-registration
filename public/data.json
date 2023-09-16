@@ -1,5 +1,5 @@
 [
-    {
+   {
       "id": 101,
       "image": "https://i.ibb.co/mDXDStF/introduction-to-programming.png",
       "name": "Introduction to Programming",
@@ -67,9 +67,9 @@
       "id": 109,
       "image": "https://i.ibb.co/sH4MPSP/Creative-Writing-Workshop.jpg",
       "name": "Creative Writing Workshop",
-      "credit": 4,
+      "Credit": 4,
       "Price": "$44.99",
       "details": "Hone your writing skills and unleash your creativity in this interactive workshop. Please join us."
     }
-  ]
+]
   
